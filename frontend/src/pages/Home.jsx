@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Repoinput from "../components/Repoinput";
+import RepoInput from "../components/RepoInput";
 import Loader from "../components/Loader";
-import Analysiscard from "../components/Analysiscard";
+import AnalysisCard from "../components/AnalysisCard";
 import CompareView from "../components/CompareView";
 import { useAnalysis } from "../hooks/useAnalysis";
 
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Single Mode */}
       {mode === "single" && (
         <>
-          {!data && !loading && <Repoinput onAnalyze={analyze} loading={loading} />}
+          {!data && !loading && <RepoInput onAnalyze={analyze} loading={loading} />}
           {loading && <Loader />}
           {error && (
             <div style={s.errorWrap}>
@@ -66,7 +66,7 @@ export default function Home() {
               <button style={s.retryBtn} onClick={reset}>← Try Again</button>
             </div>
           )}
-          {data && !loading && <Analysiscard data={data} onReset={reset} />}
+          {data && !loading && <AnalysisCard data={data} onReset={reset} />}
 
           {!data && !loading && (
             <footer style={s.footer}>
