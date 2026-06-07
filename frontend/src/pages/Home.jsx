@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Repoinput from "../components/Repoinput";
 import Loader from "../components/Loader";
-import AnalysisCard from "../components/AnalysisCard";
+import Analysiscard from "../components/Analysiscard";
 import CompareView from "../components/CompareView";
 import { useAnalysis } from "../hooks/useAnalysis";
 
@@ -66,7 +66,7 @@ export default function Home() {
               <button style={s.retryBtn} onClick={reset}>← Try Again</button>
             </div>
           )}
-          {data && !loading && <AnalysisCard data={data} onReset={reset} />}
+          {data && !loading && <Analysiscard data={data} onReset={reset} />}
 
           {!data && !loading && (
             <footer style={s.footer}>
