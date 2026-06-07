@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RepoInput from "../components/RepoInput";
+import Repoinput from "../components/Repoinput";
 import Loader from "../components/Loader";
 import AnalysisCard from "../components/AnalysisCard";
 import CompareView from "../components/CompareView";
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Single Mode */}
       {mode === "single" && (
         <>
-          {!data && !loading && <RepoInput onAnalyze={analyze} loading={loading} />}
+          {!data && !loading && <Repoinput onAnalyze={analyze} loading={loading} />}
           {loading && <Loader />}
           {error && (
             <div style={s.errorWrap}>
