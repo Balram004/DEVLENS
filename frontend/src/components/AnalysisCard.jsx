@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import TechStack from "./TechStack";
+import TechStack from "./TechStack";
 
 const COMPLEXITY_COLOR = {
   Beginner:     { color: "#00e5a0", bg: "rgba(0,229,160,0.1)" },
